@@ -68,7 +68,7 @@ public class Capandnoncapexpenses {
       WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("clearSearch")));
       clear.click();
       Thread.sleep(2000);
-       driver.findElement(By.xpath("//tr[@id='row_43']//td[@class='details_open-control']")).click();
+       //driver.findElement(By.xpath("//tr[@id='row_43']//td[@class='details_open-control']")).click();
        
 
      //Page navigation 
