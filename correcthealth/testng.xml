@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="correcthealth.correcthealth.PendingSchedule"/>
+      <class name="correcthealth.correcthealth.Resubmitvisit"/>
+      <class name="correcthealth.correcthealth.Forgetpassword"/>
+      <class name="correcthealth.correcthealth.Specialtycarerequest"/>
+      <class name="correcthealth.correcthealth.Claimstatusreport"/>
+      <class name="correcthealth.correcthealth.Vendorsmodule"/>
+      <class name="correcthealth.correcthealth.Claimwithoutpatientidreport"/>
+      <class name="correcthealth.correcthealth.edisegmentupload"/>
+      <class name="correcthealth.correcthealth.offsitependingreturn"/>
+      <class name="correcthealth.correcthealth.Completedvisit"/>
+      <class name="correcthealth.correcthealth.PendingExecMDReview"/>
+      <class name="correcthealth.correcthealth.Login"/>
+      <class name="correcthealth.correcthealth.Claimbills"/>
+      <class name="correcthealth.correcthealth.GpVendors"/>
+      <class name="correcthealth.correcthealth.Spcarerequestsummary"/>
+      <class name="correcthealth.correcthealth.Edidetails"/>
+      <class name="correcthealth.correcthealth.VisitIDswithOutstandingClaimsReport"/>
+      <class name="correcthealth.correcthealth.Ultrasoundbills"/>
+      <class name="correcthealth.correcthealth.Newrequest"/>
+      <class name="correcthealth.correcthealth.claimwithoutvisitidreport"/>
+      <class name="correcthealth.correcthealth.Patient"/>
+      <class name="correcthealth.correcthealth.Readyforvisit"/>
+      <class name="correcthealth.correcthealth.Miscbills"/>
+      <class name="correcthealth.correcthealth.Destinations"/>
+      <class name="correcthealth.correcthealth.claimreceivedreport"/>
+      <class name="correcthealth.correcthealth.patientsreport"/>
+      <class name="correcthealth.correcthealth.Labbills"/>
+      <class name="correcthealth.correcthealth.Xraybills"/>
+      <class name="correcthealth.correcthealth.Usertype"/>
+      <class name="correcthealth.correcthealth.Parseedi"/>
+      <class name="correcthealth.correcthealth.Useraccount"/>
+      <class name="correcthealth.correcthealth.Internalconsult"/>
+      <class name="correcthealth.correcthealth.specialitycarevisitreport"/>
+      <class name="correcthealth.correcthealth.Pharmacybills"/>
+      <class name="correcthealth.correcthealth.Resubmitandupdatevisit"/>
+      <class name="correcthealth.correcthealth.SpecialityCareVisitsStatusReport"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
