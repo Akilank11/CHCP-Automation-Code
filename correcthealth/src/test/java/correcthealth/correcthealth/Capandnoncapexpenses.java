@@ -71,7 +71,7 @@ public class Capandnoncapexpenses {
        driver.findElement(By.xpath("//tr[@id='row_43']//td[@class='details_open-control']")).click();
        
 
-     //Page navigation
+     //Page navigation 
      		        WebElement pagenavigation = driver.findElement(By.name("capAndNonCapExpensesTable_length"));
      		        Select select4 = new Select(pagenavigation);
      		        select4.selectByVisibleText("80");
@@ -81,6 +81,6 @@ public class Capandnoncapexpenses {
      		        Thread.sleep(5000);
      		        WebElement previous = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("capAndNonCapExpensesTable_previous")));
      		        previous.click();
-     		        Thread.sleep(8000);
+     		        Thread.sleep(7000);
 	  
 	}}
