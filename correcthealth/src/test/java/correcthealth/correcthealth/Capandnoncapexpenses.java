@@ -60,7 +60,7 @@ public class Capandnoncapexpenses {
 	  WebElement facility = driver.findElement(By.name("facilityCode"));
       Select facilityselect = new Select(facility);
       facilityselect.selectByVisibleText("Acadia Parish Jail");
-      
+      Thread.sleep(1500);
    // Click Search and Clear
 	    WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("newSearch")));
       search.click(); 
