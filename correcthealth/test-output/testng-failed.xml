@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="correcthealth.correcthealth.Capandnoncapexpenses">
+      <class name="correcthealth.correcthealth.Claimbill">
         <methods>
           <include name="f"/>
         </methods>
-      </class> <!-- correcthealth.correcthealth.Capandnoncapexpenses -->
+      </class> <!-- correcthealth.correcthealth.Claimbill -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
