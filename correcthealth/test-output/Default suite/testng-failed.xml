@@ -5,7 +5,7 @@
     <classes>
       <class name="correcthealth.correcthealth.Claimbill">
         <methods>
-          <include name="createnewbill"/>
+          <include name="Editandsorting"/>
         </methods>
       </class> <!-- correcthealth.correcthealth.Claimbill -->
     </classes>

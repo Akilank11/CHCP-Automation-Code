@@ -171,7 +171,8 @@ public class Claimbill {
                             Thread.sleep(2000);
                             clear.click();
 	}
-                            @Test
+     //  Create new Claim Bills                     
+	@Test(enabled=false)
                         	public void createnewbill() throws InterruptedException {
                         		  driver.get("http://localhost:8090/CHCP/login");
                         		 	driver.manage().window().maximize();
@@ -307,6 +308,75 @@ public class Claimbill {
 		        driver.findElement(By.id("cancelbtn")).click();
 		        driver.findElement(By.id("unApprovebtn2")).click();
 		        
+		        
 		     
   }
+	 //  Edit Claim Bill and Sorting                  
+		@Test
+	                        	public void Editandsorting() throws InterruptedException {
+	                        		  driver.get("http://localhost:8090/CHCP/login");
+	                        		 	driver.manage().window().maximize();
+	                        		 	
+	                        		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+	                        		 	driver.findElement(By.id("password")).sendKeys("Dev@5612");
+	                        		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
+	                        		 	rememberme.click();
+	                        		 	driver.findElement(By.id("btn-login")).click();
+
+	                        		 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	                        		 	WebElement claimbills = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Claim Bills']")));
+	                        		 	claimbills.click(); 
+	                        		 	Thread.sleep(3000);
+	                        		 	WebElement claimbill = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Claim Bill']"))); 
+	                        		 	claimbill.click();
+	                        	  Thread.sleep(9000);
+	                        	  
+	                        	  //Sorting
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Content Type: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Content Type: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Bill ID: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Bill ID: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Document Nbr: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Document Nbr: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Bill DOS: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Bill DOS: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Patient ID: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Patient ID: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Facility: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Facility: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Vendor: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Vendor: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Bill Status: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Bill Status: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Payable Status: activate to sort column ascending']")).click();
+	                        	  Thread.sleep(1000);
+	                        	  driver.findElement(By.xpath("//th[@aria-label='Payable Status: activate to sort column descending']")).click();
+	                        	  Thread.sleep(1000);
+                      		 	claimbill.click();
+                      		 	Thread.sleep(4000);
+                      		 	WebElement InvoiceDate = driver.findElement(By.xpath("//tr[@id='row_1465998']//select[@id='selectedVisitID']"));
+                		        Select InvoiceDateselect = new Select(InvoiceDate);
+                		        InvoiceDateselect.selectByVisibleText("120-V02141");
+                		        Thread.sleep(2000);
+                		        driver.findElement(By.id("saveVisitList")).click();
+                		        Thread.sleep(4000);
+                		        driver.findElement(By.xpath("//button[normalize-space()='ok']")).click();
+                		        
+}
 }
