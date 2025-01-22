@@ -377,6 +377,20 @@ public class Claimbill {
                 		        driver.findElement(By.id("saveVisitList")).click();
                 		        Thread.sleep(4000);
                 		        driver.findElement(By.xpath("//button[normalize-space()='ok']")).click();
+                		        Thread.sleep(2000);
+                		        driver.findElement(By.xpath("//img[@src='../resources/images/excel_small.png']")).click();
+                		        Thread.sleep(1000);
+                		        WebElement pagenavigation = driver.findElement(By.name("claimBillsSummaryTable_length"));
+                		        Select select = new Select(pagenavigation);
+                		        select.selectByVisibleText("50");
+                		        Thread.sleep(3000);
+                		        WebElement nextpage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("claimBillsSummaryTable_next")));
+                		        nextpage.click();
+                		        Thread.sleep(5000);
+                		        WebElement previous = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("claimBillsSummaryTable_previous")));
+                		        previous.click();
+                		        Thread.sleep(8000);
+                		          
                 		        
 }
-}
+}	
