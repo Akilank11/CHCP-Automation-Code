@@ -37,22 +37,22 @@ public class Parseedi {
 	  //}
 	  //driver.manage().window().maximize();
 	//}
-	@Test (enabled = false)
+	@Test 
 	public void f() throws InterruptedException {
 		  driver.get("http://localhost:8090/CHCP/login");
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
 
 		 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 	WebElement patientrecord = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='EDI']")));
-		 	patientrecord.click(); 
-		 	WebElement inpatientrecord = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Parse EDI']"))); 
-		 	inpatientrecord.click();
+		 	WebElement Edi = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='EDI']")));
+		 	Edi.click(); 
+		 	WebElement Parseedi = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Parse EDI']"))); 
+		 	Parseedi.click();
 	Thread.sleep(2000);
 
 	 //Upload file
@@ -66,12 +66,12 @@ public class Parseedi {
   //Select Receiving date
     driver.findElement(By.id("ediReceivedDate")).click();
     WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-    WebElement FROMDATE = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[3]")));
+    WebElement FROMDATE = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[4]")));
     FROMDATE.click();
-    WebElement dosselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='17'][data-month='11'][data-year='2024']")));
+    WebElement dosselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='17'][data-month='3'][data-year='2025']")));
     dosselect.click();
     
-    Thread.sleep(1000);
+    Thread.sleep(3000);
     //Select type
     WebElement type = driver.findElement(By.id("ediFileType"));
     Select typeselect = new Select(type);
@@ -84,14 +84,14 @@ public class Parseedi {
     
     Thread.sleep(5000);
 	}
-	@Test
+	@Test(enabled = false)
 	public void search() throws InterruptedException {
 		
 			  driver.get("http://localhost:8090/CHCP/login");
 			 	driver.manage().window().maximize();
 			 	
 			 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-			 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+			 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 			 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 			 	rememberme.click();
 			 	driver.findElement(By.id("btn-login")).click();
@@ -110,9 +110,9 @@ public class Parseedi {
     
     driver.findElement(By.id("ediReceivedDate")).click();
     WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-    WebElement FROMDATE1 = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[3]")));
+    WebElement FROMDATE1 = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[4]")));
     FROMDATE1.click();
-    WebElement dosselect1 = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='17'][data-month='11'][data-year='2024']")));
+    WebElement dosselect1 = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='17'][data-month='3'][data-year='2025']")));
     dosselect1.click();
     Thread.sleep(1000);
     driver.findElement(By.id("newSearch")).click();

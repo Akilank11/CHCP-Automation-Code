@@ -42,7 +42,7 @@ public class specialitycarevisitreport {
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
@@ -61,22 +61,22 @@ public class specialitycarevisitreport {
     facility.click();
     //WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Speciality Care Visits Report']")));
     //search.click(); 
-    //Thread.sleep(2000);
+    Thread.sleep(2000);
     //WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("clearSearch")));
     //clear.click();
     
     //Select Patient Name
     driver.findElement(By.id("select2-autoCompleterPatientName-container")).click();
-    driver.findElement(By.xpath("//input[@role='textbox']")).sendKeys("test user akilan");
-    WebElement patientname = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Test User Akilan']")));
+    driver.findElement(By.xpath("//input[@role='textbox']")).sendKeys("Pugh April");
+    WebElement patientname = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Pugh April']")));
     patientname.click();
     //search.click();
     //clear.click();
     
     //Select Patient id
     driver.findElement(By.id("select2-autoCompleterPatientID-container")).click();
-    driver.findElement(By.xpath("//input[@role='textbox']")).sendKeys("116-P01516");
-    WebElement patientid = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='116-P01516']")));
+    driver.findElement(By.xpath("//input[@role='textbox']")).sendKeys("116-P00011");
+    WebElement patientid = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='116-P00011']")));
     patientid.click();
     //search.click();
     //clear.click();

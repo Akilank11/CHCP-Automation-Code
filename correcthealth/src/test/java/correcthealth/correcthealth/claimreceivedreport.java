@@ -41,7 +41,7 @@ public void f() throws InterruptedException {
 	 	driver.manage().window().maximize();
 	 	
 	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-	 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 	 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 	 	rememberme.click();
 	 	driver.findElement(By.id("btn-login")).click();

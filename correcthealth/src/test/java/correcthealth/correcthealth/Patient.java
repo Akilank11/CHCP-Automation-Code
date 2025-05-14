@@ -21,7 +21,7 @@ public class Patient {
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("akilanksa10@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@1234");
+		 	driver.findElement(By.id("password")).sendKeys("Dev@9092");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();

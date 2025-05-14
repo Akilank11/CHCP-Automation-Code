@@ -43,7 +43,7 @@ public void f() throws InterruptedException {
 	 	driver.manage().window().maximize();
 	 	
 	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-	 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 	 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 	 	rememberme.click();
 	 	driver.findElement(By.id("btn-login")).click();
@@ -72,7 +72,7 @@ FROMDATE.click();
 FROMDATE.click();
 FROMDATE.click();
 FROMDATE.click();
-WebElement dosselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='30'][data-month='5'][data-year='2024']")));
+WebElement dosselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='30'][data-month='10'][data-year='2024']")));
 dosselect.click();
 
 
@@ -86,7 +86,7 @@ TODATE.click();
 TODATE.click();
 TODATE.click();
 TODATE.click();
-WebElement dos1select = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='6'][data-year='2024']")));
+WebElement dos1select = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='11'][data-year='2024']")));
 dos1select.click();
 //WebElement invoice = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("endDateFilter")));
 //invoice.sendKeys("07/15/2024");

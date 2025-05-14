@@ -19,14 +19,14 @@ import org.testng.annotations.AfterMethod;
 public class Useraccount {
 	
 	WebDriver driver = new ChromeDriver();
-	  @Test(enabled = false)
+	  @Test
 	  public void f() throws InterruptedException {
 		
 	 	 driver.get("http://localhost:8090/CHCP/login");
 	 	driver.manage().window().maximize();
 	 	
 	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-	 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 	 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 	 	rememberme.click();
 	 	driver.findElement(By.id("btn-login")).click();
@@ -106,12 +106,12 @@ public class Useraccount {
         delete.click();
 	  }
         //Create new User
-        @Test
+        @Test(enabled = false)
         public void createuser() throws InterruptedException {
         	driver.get("http://localhost:8090/CHCP/login");
     	 	driver.manage().window().maximize();
     	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-    	 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+    	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
     	 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
     	 	rememberme.click();
     	 	driver.findElement(By.id("btn-login")).click();
@@ -136,8 +136,8 @@ public class Useraccount {
       //Double click on element
       WebElement ele = driver.findElement(By.xpath("//select[@id='bootstrap-duallistbox-nonselected-list_facilityID']//option[@value='87'][normalize-space()='Baldwin County Jail (188)']")); 
       act.doubleClick(ele).perform();
-      driver.findElement(By.id("email")).sendKeys("AkilanTest10911@gmail.com");
-      driver.findElement(By.id("mobile")).sendKeys("9187614320");
+      driver.findElement(By.id("email")).sendKeys("AkilanTest1911@gmail.com");
+      driver.findElement(By.id("mobile")).sendKeys("1234569880");
      // WebElement phone= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[contains(@id,'phone')]")));
      // phone.sendKeys("9342893541"); 
       driver.findElement(By.xpath("//button[normalize-space()='Send Credentials Email']")).click();
@@ -152,9 +152,52 @@ public class Useraccount {
       Thread.sleep(2000);
       WebElement SAVEUSER= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Save']")));
       SAVEUSER.click();
-      WebElement backUSER= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"admin\"]/div/div[1]/div[1]/div/div[1]/div[1]/img")));
+      Thread.sleep(2000);
+      WebElement backUSER= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//img[@class='img-responsive goSummary'])[1]")));
       backUSER.click();
 	
         }
-}
+      //Edit new User
+        @Test(enabled = false)
+        public void Edituser() throws InterruptedException {
+        	driver.get("http://localhost:8090/CHCP/login");
+    	 	driver.manage().window().maximize();
+    	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+    	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
+    	 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
+    	 	rememberme.click();
+    	 	driver.findElement(By.id("btn-login")).click();
+    	 	driver.findElement(By.xpath("//a[normalize-space()='Users']")).click();
+    	 	driver.findElement(By.xpath("//a[normalize-space()='User Accounts']")).click();
+    	 	
+    	 
+    	 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        
+    	 	WebElement edituser= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td[@class=' edit-control'])[1]")));
+    	 	edituser.click();
+    	 	
+    	 	 WebElement fileInput = driver.findElement(By.id("file"));
 
+    	        // Provide the file path
+    	        String filePath = "C:\\Users\\panini019\\Pictures\\Screenshots\\2nd Bug.png";
+    	        fileInput.sendKeys(filePath);
+    	        Thread.sleep(2000);
+    	        WebElement SAVEUSER= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Save']")));
+    	        SAVEUSER.click();
+    	        Thread.sleep(2000);
+    	        WebElement backUSER= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//img[@class='img-responsive goSummary'])[1]")));
+    	        backUSER.click();
+    	        
+    	      //Page navigation
+		        WebElement pagenavigation = driver.findElement(By.name("summaryTable_length"));
+		        Select select4 = new Select(pagenavigation);
+		        select4.selectByVisibleText("50");
+		        Thread.sleep(3000);
+		        WebElement nextpage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("summaryTable_next")));
+		        nextpage.click();
+		        Thread.sleep(5000);
+		        WebElement previous = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("summaryTable_previous")));
+		        previous.click();
+		        Thread.sleep(8000);
+}
+}

@@ -43,7 +43,7 @@ public class Edidetails {
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
@@ -67,9 +67,9 @@ public class Edidetails {
   //Select Receiving date
     driver.findElement(By.id("ediReceivedDate")).click();
     WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-    WebElement FROMDATE = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[3]")));
+    WebElement FROMDATE = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[4]")));
     FROMDATE.click();
-    WebElement dosselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='17'][data-month='11'][data-year='2024']")));
+    WebElement dosselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='17'][data-month='3'][data-year='2025']")));
     dosselect.click();
     
     Thread.sleep(1000);
@@ -92,7 +92,7 @@ public class Edidetails {
 			 	driver.manage().window().maximize();
 			 	
 			 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-			 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+			 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 			 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 			 	rememberme.click();
 			 	driver.findElement(By.id("btn-login")).click();
@@ -116,9 +116,9 @@ public class Edidetails {
     
     driver.findElement(By.id("ediReceivedDate")).click();
     WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
-    WebElement FROMDATE1 = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[3]")));
+    WebElement FROMDATE1 = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[4]")));
     FROMDATE1.click();
-    WebElement dosselect1 = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='17'][data-month='11'][data-year='2024']")));
+    WebElement dosselect1 = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='17'][data-month='3'][data-year='2025']")));
     dosselect1.click();
     Thread.sleep(1000);
     search.click();
