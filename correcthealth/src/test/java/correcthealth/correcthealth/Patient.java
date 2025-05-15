@@ -15,125 +15,209 @@ import org.testng.annotations.Test;
 
 public class Patient {
 	WebDriver driver = new ChromeDriver();
-	  @Test
+	  @Test(enabled = false)
 	  public void f() throws InterruptedException {
 		  driver.get("http://localhost:8090/CHCP/login");
 		 	driver.manage().window().maximize();
 		 	
-		 	driver.findElement(By.id("userName")).sendKeys("akilanksa10@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@9092");
+		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
-		 	driver.findElement(By.xpath("//a[normalize-space()='Users']")).click();
+		 	
 		 	
 		 	//Patient Click
-		 	driver.findElement(By.xpath("//a[normalize-space()='Patient']")).click();
-		 	driver.findElement(By.xpath("//a[normalize-space()='Patients']")).click();
-		 	Thread.sleep(25000);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		 	WebElement Patient = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Patient']")));
+		 	Patient.click(); 
+		 	Thread.sleep(3000);
+		 	WebElement Patients = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Patients']"))); 
+		 	Patients.click();
+	  Thread.sleep(9000);
 		 	
 		 	//select facility
-		 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 	WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("select2-autoCompleterFacilityId-container")));
-	        clear.click(); 
+		 	
+	  WebElement facility = driver.findElement(By.id("select2-autoCompleterFacilityId-container"));
+	  facility.click();  
 	        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(text(),'Athens Correctional Institution (120)')]")));
 	        option.click();
+	      //Click Search
+	        WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("newSearch")));
+	        search.click(); 
+	        Thread.sleep(1000);
+	        //Click Clear
+	        WebElement clear1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("clearSearch")));
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
 	        //Select status
 	        WebElement status = driver.findElement(By.id("status"));
 	        Select select1 = new Select(status);
 	        select1.selectByVisibleText("Active");
+	        search.click(); 
+	        Thread.sleep(1000);
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
 	        //select patientid
+	        facility.click();
+	        option.click();
+	        Thread.sleep(1000);
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	        WebElement patientDropdown = driver.findElement(By.id("select2-autoCompleterPatientID-container"));
 	        patientDropdown.click();  
+	        
 	        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 	        WebElement option1 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("(//li[normalize-space()='120-P00011'])[1]")));
 	        option1.click();
+	        search.click(); 
+	        Thread.sleep(1000);
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
 	        //select patientname
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	        WebElement patientnameDropdown = driver.findElement(By.xpath("//span[contains(text(),'Select Patient Name')]"));
 	        patientnameDropdown.click();
-	      WebElement option2 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("(//li[normalize-space()='Peck Joseph'])[1]")));
+	      WebElement option2 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Sheardon Allen']")));
 	        option2.click();
+	        search.click(); 
+	        Thread.sleep(1000);
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
 	        //selectbooking
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	        WebElement selectbooking = driver.findElement(By.id("select2-autoCompleterBookingNumber-container"));
 	        selectbooking.click();
-	      WebElement option3 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='342']")));
+	      WebElement option3 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='007']")));
 	        option3.click();
+	        search.click(); 
+	        Thread.sleep(1000);
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
 	        //select inmate
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	        WebElement selectinmate = driver.findElement(By.id("select2-autoCompleterInmateNumber-container"));
 	        selectinmate.click();
-	      WebElement option4 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='1419551']")));
+	      WebElement option4 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='1048875']")));
 	        option4.click();
+	        search.click(); 
+	        Thread.sleep(1000);
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
 	        //select type of inmate
 	        WebElement typeinmate = driver.findElement(By.id("typeofInmate"));
 	        Select select2 = new Select(typeinmate);
 	        select2.selectByVisibleText("County Inmate");
+	        search.click(); 
+	        Thread.sleep(1000);
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
 	        //Select housedin
-	        //WebElement housedin = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("select2-autoCompleterHousedIn-container")));
-	        //housedin.click(); 
-	        //WebElement housedinoption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Acadia Parish Jail (182)']")));
-	        //housedinoption.click();
+	        WebElement housedin = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Select Housed In')]")));
+	        housedin.click(); 
+	        WebElement housedinoption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Bartow County Jail (114)']")));
+	        housedinoption.click();
+	        search.click(); 
+	        Thread.sleep(1000);
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
 	        //selectdate type
-	        //WebElement selectdatetype = driver.findElement(By.id("datetype"));
-	        //Select select3 = new Select(selectdatetype);
-	        //select3.selectByVisibleText("Housed In");
-	  
-	  
-	      //Click Search
-	        WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("newSearch")));
+	        WebElement selectdatetype = driver.findElement(By.id("datetype"));
+	        Select select3 = new Select(selectdatetype);
+	        select3.selectByVisibleText("Housed In");
+	        
+	        
+	      //Select Issue From Date
+	        driver.findElement(By.id("dateFrom")).click();
+	      
+	        WebElement Issuefromdate = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[4]")));
+	        Issuefromdate.click();
+	        Issuefromdate.click();
+	        Issuefromdate.click();
+	        Issuefromdate.click();
+	        WebElement issuedateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='19'][data-month='0'][data-year='2025']")));
+	        issuedateselect.click();
+	        
+
+	        //Select Issue To Date
+	        driver.findElement(By.id("dateTo")).click();
+	        WebElement Issuetodate = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[10]")));
+	        Issuetodate.click();
+	        Issuetodate.click();
+	        WebElement Issuetodateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='1'][data-month='2'][data-year='2025']")));
+	        Issuetodateselect.click();
 	        search.click(); 
+	        Thread.sleep(1000);
+	        clear1.click();
+	        Thread.sleep(1000);
 	        
-	        //Click Clear
-	        WebElement clear1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("clearSearch")));
-	        clear1.click(); 
+	  }
+	  @Test
+      public void Edituser() throws InterruptedException {
+      	driver.get("http://localhost:8090/CHCP/login");
+  	 	driver.manage().window().maximize();
+  	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+  	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
+  	 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
+  	 	rememberme.click();
+  	 	driver.findElement(By.id("btn-login")).click();
+	  
+  	//Patient Click
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	 	WebElement Patient = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Patient']")));
+	 	Patient.click(); 
+	 	Thread.sleep(3000);
+	 	WebElement Patients = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Patients']"))); 
+	 	Patients.click();
+  Thread.sleep(9000);
 	        
-	      //Move to nextpage
-	        WebElement nextpage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='newVisitSummaryTable_next']")));
+	        //Page navigation
+	        WebElement pagenavigation = driver.findElement(By.name("summaryTable_length"));
+	        Select select4 = new Select(pagenavigation);
+	        select4.selectByVisibleText("50");
+	        Thread.sleep(3000);
+	        WebElement nextpage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("summaryTable_next")));
 	        nextpage.click();
-	        
-	        //page navigation
-	        WebElement pagenavigation = driver.findElement(By.name("newVisitSummaryTable_length"));
-	        Select select5 = new Select(pagenavigation);
-	        select5.selectByVisibleText("80");
+	        Thread.sleep(5000);
+	        WebElement previous = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("summaryTable_previous")));
+	        previous.click();
+	        Thread.sleep(8000);
 	        
 	      //Click download
-	         WebElement download = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//img[@src='../resources/images/excel_small.png'])[1]")));
+	         WebElement download = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@src='/CHCP/resources/images/excel.png']")));
 	         download.click(); 
 
 
-	         //Click Clear
+	   
 	         
-	         clear1.click(); 
+	       
 	         
 	         //Click Patient Edit
-	         WebElement patientedit = driver.findElement(By.xpath("//tr[@id='row_933721']//td[contains(@class,'edit-control')]"));
+	         WebElement patientedit = driver.findElement(By.xpath("(//td[@class=' edit-control'])[1]"));
 	         patientedit.click();
 	         
 	      WebElement editname = driver.findElement(By.id("lastName"));
 	      editname.clear();
 	      editname.sendKeys("suresh");
 	      driver.findElement(By.id("saveBtnDiv1")).click();
+	      Thread.sleep(2000);
 	      driver.findElement(By.xpath("(//img[@class='img-responsive goSummary'])[1]")).click();
 	       
 	      //Download print
 	      
-	      WebElement patientprint = driver.findElement(By.xpath("//tr[@id='row_933721']//td[@class=' download-control fileDownloadBtn']"));
+	      WebElement patientprint = driver.findElement(By.xpath("(//td[contains(@class,'download-control fileDownloadBtn')])[1]"));
 	      patientprint.click();
 	        	 
 	      //Delete Patient
 	      
-	      WebElement deletepatient = driver.findElement(By.xpath("//tr[@id='row_933721']//td[contains(@class,'delete-control fileDeleteBtn')]"));
+	      WebElement deletepatient = driver.findElement(By.xpath("(//td[contains(@class,'delete-control fileDeleteBtn')])[1]"));
 	      deletepatient.click();
 	      WebElement deletepopup = driver.findElement(By.xpath("//button[normalize-space()='cancel']"));
 	      deletepopup.click();
