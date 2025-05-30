@@ -71,7 +71,7 @@ public class Caplogreport {
       fromdate.click();
       fromdate.click();
       fromdate.click();
-      WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='5'][data-year='2024']")));
+      WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='10'][data-year='2024']")));
       fromdateselect.click();
 
 //Select Invoice date
@@ -84,7 +84,7 @@ public class Caplogreport {
       todate.click();
       todate.click();
       todate.click();
-       WebElement todateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='11'][data-month='6'][data-year='2024']")));
+       WebElement todateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='11'][data-month='11'][data-year='2024']")));
       todateselect.click();
 Thread.sleep(2000);
 

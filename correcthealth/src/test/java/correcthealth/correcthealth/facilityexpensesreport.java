@@ -43,7 +43,7 @@ public class facilityexpensesreport {
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
@@ -77,7 +77,7 @@ WebElement ele = driver.findElement(By.xpath("(//option[@value='23'][normalize-s
       fromdate.click();
       fromdate.click();
       fromdate.click();
-      WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='5'][data-year='2024']")));
+      WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='10'][data-year='2024']")));
       fromdateselect.click();
 
 //Select to date
@@ -90,7 +90,7 @@ WebElement ele = driver.findElement(By.xpath("(//option[@value='23'][normalize-s
       todate.click();
       todate.click();
       todate.click();
-       WebElement todateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='11'][data-month='6'][data-year='2024']")));
+       WebElement todateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='11'][data-month='11'][data-year='2024']")));
       todateselect.click();
 Thread.sleep(2000);
       

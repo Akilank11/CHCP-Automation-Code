@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="correcthealth.correcthealth.Vendorsmodule">
+      <class name="correcthealth.correcthealth.Destinationreport">
         <methods>
           <include name="f"/>
         </methods>
-      </class> <!-- correcthealth.correcthealth.Vendorsmodule -->
+      </class> <!-- correcthealth.correcthealth.Destinationreport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -43,7 +43,7 @@ public class Inpatientpricing {
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
@@ -73,7 +73,7 @@ public class Inpatientpricing {
       WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
       WebElement Startdate = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[12]")));
       Startdate.click();
-      WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='0'][data-year='2025']")));
+      WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='5'][data-year='2025']")));
       fromdateselect.click();
 
 //Select End date
@@ -83,7 +83,7 @@ public class Inpatientpricing {
       WebElement enddate = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[18]")));
       enddate.click();
       enddate.click();
-       WebElement todateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='11'][data-month='1'][data-year='2025']")));
+       WebElement todateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='11'][data-month='6'][data-year='2025']")));
       todateselect.click();
 Thread.sleep(2000);
       
@@ -102,7 +102,7 @@ Thread.sleep(1000);
   		 	driver.manage().window().maximize();
   		 	
   		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-  		 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+  		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
   		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
   		 	rememberme.click();
   		 	driver.findElement(By.id("btn-login")).click();
@@ -138,7 +138,7 @@ Thread.sleep(1000);
  WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
  WebElement Startdate = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[12]")));
  Startdate.click();
- WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='0'][data-year='2025']")));
+ WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='5'][data-year='2025']")));
  fromdateselect.click();
  search.click(); 
  clear.click(); 
@@ -148,7 +148,7 @@ Thread.sleep(1000);
  WebElement enddate = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[18]")));
  enddate.click();
  enddate.click();
-  WebElement enddateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='11'][data-month='1'][data-year='2025']")));
+  WebElement enddateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='11'][data-month='6'][data-year='2025']")));
   enddateselect.click();
  search.click(); 
  clear.click(); 
@@ -193,7 +193,7 @@ Thread.sleep(1000);
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@9090");
+		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
@@ -219,7 +219,7 @@ Thread.sleep(1000);
 	  WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 	  WebElement Startdate = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[24]")));
 	  Startdate.click();
-	  WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='0'][data-year='2025']")));
+	  WebElement fromdateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='18'][data-month='5'][data-year='2025']")));
 	  fromdateselect.click();
 	  driver.findElement(By.id("fileUploadEndDate")).click();
 	  WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));

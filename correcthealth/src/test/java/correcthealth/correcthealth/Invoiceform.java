@@ -73,7 +73,7 @@ public class Invoiceform {
       invoicedate.click();
       invoicedate.click();
       invoicedate.click();
-       WebElement invoicedateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='2'][data-year='2024']")));
+       WebElement invoicedateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='6'][data-year='2024']")));
        invoicedateselect.click();
 Thread.sleep(2000);
 driver.findElement(By.xpath("//button[normalize-space()='>>']")).click();
@@ -112,7 +112,7 @@ driver.findElement(By.xpath("//button[normalize-space()='>>']")).click();
 		 	Invoiceform.click();
 	  Thread.sleep(2000);
 	  
-	  driver.findElement(By.xpath("//tr[@id='row_41']//td[contains(@class,'edit-control btnCol')]")).click();
+	  driver.findElement(By.xpath("(//td[@class=' edit-control btnCol'])[1]")).click();
 	  WebElement Facility = driver.findElement(By.name("facilityIdFilter"));
 	Select Facilityselect = new Select(Facility);
 	Facilityselect.selectByVisibleText("Harris County Prison (176)");
@@ -156,7 +156,7 @@ driver.findElement(By.xpath("//button[normalize-space()='>>']")).click();
 		      invoiceDateFilter.click();
 		      invoiceDateFilter.click();
 		      invoiceDateFilter.click();
-		       WebElement invoiceDateFilterselect = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='2'][data-year='2024']")));
+		       WebElement invoiceDateFilterselect = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='6'][data-year='2024']")));
 		       invoiceDateFilterselect.click();
 		
 		       Thread.sleep(1000);
@@ -250,7 +250,7 @@ driver.findElement(By.xpath("//button[normalize-space()='>>']")).click();
 					      invoiceDate.click();
 					      invoiceDate.click();
 					      invoiceDate.click();
-					       WebElement invoiceDateFilterselect = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='2'][data-year='2024']")));
+					       WebElement invoiceDateFilterselect = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='6'][data-year='2024']")));
 					       invoiceDateFilterselect.click();
 					
 					       Thread.sleep(1000);
@@ -269,7 +269,7 @@ driver.findElement(By.xpath("//button[normalize-space()='>>']")).click();
 						      invoiceDateto.click();
 						      invoiceDateto.click();
 						      
-						      WebElement invoiceDatetoselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='3'][data-year='2024']")));
+						      WebElement invoiceDatetoselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='15'][data-month='7'][data-year='2024']")));
 						       invoiceDatetoselect.click();
 						
 						       Thread.sleep(2000);
