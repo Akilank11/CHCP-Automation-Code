@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-10T10:25:52 IST" name="Default suite" finished-at="2025-06-10T10:26:06 IST" duration-ms="14244">
+  <suite started-at="2025-06-10T11:53:49 IST" name="Default suite" finished-at="2025-06-10T11:54:28 IST" duration-ms="38904">
     <groups>
     </groups>
-    <test started-at="2025-06-10T10:25:52 IST" name="Default test" finished-at="2025-06-10T10:26:06 IST" duration-ms="14244">
-      <class name="correcthealth.correcthealth.PendingExecMDReview">
-        <test-method signature="f()[pri:0, instance:correcthealth.correcthealth.PendingExecMDReview@5ee2b6f9]" started-at="2025-06-10T10:25:52 IST" name="f" finished-at="2025-06-10T10:26:06 IST" duration-ms="14214" status="FAIL">
+    <test started-at="2025-06-10T11:53:49 IST" name="Default test" finished-at="2025-06-10T11:54:28 IST" duration-ms="38904">
+      <class name="correcthealth.correcthealth.Patient">
+        <test-method signature="Patientcreate()[pri:0, instance:correcthealth.correcthealth.Patient@704f1591]" started-at="2025-06-10T11:53:50 IST" name="Patientcreate" finished-at="2025-06-10T11:54:28 IST" duration-ms="38877" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[element click intercepted: Element <span class="select2-selection__placeholder">...</span> is not clickable at point (379, 204). Other element would receive the click: <div class="modal fade in" id="progressBarModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-toggle="modal" data-backdrop="static" data-keyboard="false" style="position: fixed; top: 50px; left: 10px; display: block; padding-right: 15px;">...</div>
+              <![CDATA[element click intercepted: Element <button type="button" id="newPatientAcc" class="savebtn1" style="visibility:visible">...</button> is not clickable at point (466, 81). Other element would receive the click: <div class="modal-backdrop fade in"></div>
   (Session info: chrome=137.0.7151.69)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cee61896251e64e00eecefb1aa36bc0b, clickElement {id=f.F3A65B5FBF81D8C5A1DFF4BD111532C9.d.6FC8EFB610A86E11A98C863009F2C879.e.1887}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\PANINI~2\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50197}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50197/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cee61896251e64e00eecefb1aa36bc0b)] -> xpath: //span[contains(text(),'Select Facility')]]
-Session ID: cee61896251e64e00eecefb1aa36bc0b]]>
+Command: [ad513e95f7250325dff8d7049448b972, clickElement {id=f.E1E0E8DB4F53DB47DC6117EE68DB7E7C.d.AA5D5914A39F9C2F0EE1F2A60779FF1A.e.165}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\PANINI~2\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59287}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59287/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ad513e95f7250325dff8d7049448b972)] -> id: newPatientAcc]
+Session ID: ad513e95f7250325dff8d7049448b972]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="select2-selection__placeholder">...</span> is not clickable at point (379, 204). Other element would receive the click: <div class="modal fade in" id="progressBarModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-toggle="modal" data-backdrop="static" data-keyboard="false" style="position: fixed; top: 50px; left: 10px; display: block; padding-right: 15px;">...</div>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" id="newPatientAcc" class="savebtn1" style="visibility:visible">...</button> is not clickable at point (466, 81). Other element would receive the click: <div class="modal-backdrop fade in"></div>
   (Session info: chrome=137.0.7151.69)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cee61896251e64e00eecefb1aa36bc0b, clickElement {id=f.F3A65B5FBF81D8C5A1DFF4BD111532C9.d.6FC8EFB610A86E11A98C863009F2C879.e.1887}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\PANINI~2\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50197}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50197/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cee61896251e64e00eecefb1aa36bc0b)] -> xpath: //span[contains(text(),'Select Facility')]]
-Session ID: cee61896251e64e00eecefb1aa36bc0b
+Command: [ad513e95f7250325dff8d7049448b972, clickElement {id=f.E1E0E8DB4F53DB47DC6117EE68DB7E7C.d.AA5D5914A39F9C2F0EE1F2A60779FF1A.e.165}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\PANINI~2\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59287}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59287/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ad513e95f7250325dff8d7049448b972)] -> id: newPatientAcc]
+Session ID: ad513e95f7250325dff8d7049448b972
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -42,7 +42,7 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at correcthealth.correcthealth.PendingExecMDReview.f(PendingExecMDReview.java:40)
+at correcthealth.correcthealth.Patient.Patientcreate(Patient.java:40)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -74,8 +74,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- correcthealth.correcthealth.PendingExecMDReview -->
+        </test-method> <!-- Patientcreate -->
+      </class> <!-- correcthealth.correcthealth.Patient -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -17,7 +17,7 @@ public class Specialtycarerequest {
 @Test
 public void f() throws InterruptedException {
 	
-	 driver.get("http://localhost:8090/CHCP/login");
+	 driver.get("http://localhost:8080/CHCP/login");
 	driver.manage().window().maximize();
 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
@@ -42,14 +42,14 @@ public void f() throws InterruptedException {
     
     //Select Facility
     driver.findElement(By.id("select2-autoCompleterFacilityId-container")).click();
-    driver.findElement(By.xpath("//input[@role='textbox']")).sendKeys("walton county jail");
-    WebElement facility = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Walton County Jail (116)']")));
+    driver.findElement(By.xpath("//input[@role='textbox']")).sendKeys("Test");
+    WebElement facility = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Test (010)']")));
     facility.click();
     
     //Select patientname
     driver.findElement(By.id("select2-autoCompleterPatientID-container")).click();
-    driver.findElement(By.xpath("//input[@role='textbox']")).sendKeys("test");
-    WebElement patientname = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(text(),'Test user Akilan')]")));
+    driver.findElement(By.xpath("//input[@role='textbox']")).sendKeys("Vijay");
+    WebElement patientname = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(text(),'Vijay Leo')]")));
     patientname.click();
     
   //Select Destination

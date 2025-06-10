@@ -15,6 +15,80 @@ import org.testng.annotations.Test;
 
 public class Patient {
 	WebDriver driver = new ChromeDriver();
+	
+	@Test
+	  public void Patientcreate() throws InterruptedException {
+		    driver.get("http://localhost:8080/CHCP/login");
+		 	driver.manage().window().maximize();
+		 	
+		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+  	 	    driver.findElement(By.id("password")).sendKeys("Dev@7070");
+		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
+		 	rememberme.click();
+		 	driver.findElement(By.id("btn-login")).click();
+		 	
+		 	//Patient Click
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		 	WebElement Patient = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='Patient']")));
+		 	Patient.click(); 
+		 	Thread.sleep(3000);
+		 	WebElement Patients = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Patients']"))); 
+		 	Patients.click();
+		 	Thread.sleep(9000);
+	  
+	  //Patient Create
+	  driver.findElement(By.id("newPatientAcc")).click();
+	  Thread.sleep(3000);
+	  driver.findElement(By.id("firstName")).sendKeys("Akilan");
+	  driver.findElement(By.id("middleInitial")).sendKeys("Test");
+	  driver.findElement(By.id("lastName")).sendKeys("Patient");
+	  driver.findElement(By.id("patientDOB")).click();
+      WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+      WebElement DOB = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[18]")));
+      DOB.click();
+      DOB.click();
+      DOB.click();
+      DOB.click();
+      DOB.click();
+      DOB.click();
+      WebElement DOBselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='30'][data-month='0'][data-year='2025']")));
+      DOBselect.click();
+      Thread.sleep(1000);
+      WebElement Facility = driver.findElement(By.id("facilityId"));
+      Select Facilityselect = new Select(Facility);
+      Facilityselect.selectByVisibleText("Test (010)");
+      WebElement Booking = driver.findElement(By.id("inmateBookedIn"));
+      Select Bookingselect = new Select(Booking);
+      Bookingselect.selectByVisibleText("No");
+      driver.findElement(By.id("bookingNumber")).sendKeys("56879");
+      driver.findElement(By.id("bookInDateTime")).click();
+      WebElement Bookindate = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[@type='button'])[24]")));
+      Bookindate.click();
+      WebElement Bookindateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='30'][data-month='4'][data-year='2025']")));
+      Bookindateselect.click();
+      Thread.sleep(1000);
+      driver.findElement(By.id("insuredID")).sendKeys("561279");
+      driver.findElement(By.id("inmateNumber")).sendKeys("5687459");
+      driver.findElement(By.id("typeofInmate1")).click();
+      WebElement Housedin = driver.findElement(By.id("housedIn"));
+      Select Housedinselect = new Select(Housedin);
+      Housedinselect.selectByVisibleText("Test (010)");
+      driver.findElement(By.id("housedInDate")).click();
+      WebElement Houseddateselect = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("td[data-date='30'][data-month='5'][data-year='2025']")));
+      Houseddateselect.click();
+      Thread.sleep(1000);
+      driver.findElement(By.id("patientNote")).sendKeys("Test");
+      WebElement patientsex = driver.findElement(By.id("sex"));
+      Select patientsexselect = new Select(patientsex);
+      patientsexselect.selectByVisibleText("Male");
+      WebElement patientrace = driver.findElement(By.id("race"));
+      Select patientraceselect = new Select(patientrace);
+      patientraceselect.selectByVisibleText("Hispanic");
+      driver.findElement(By.id("otherAllergies")).sendKeys("Allergy");
+      Thread.sleep(1000);
+      driver.findElement(By.id("saveBtnDiv1")).click();
+      Thread.sleep(1000);
+	}
 	  @Test(enabled = false)
 	  public void f() throws InterruptedException {
 		  driver.get("http://localhost:8080/CHCP/login");
@@ -159,7 +233,7 @@ public class Patient {
 	        Thread.sleep(1000);
 	        
 	  }
-	  @Test
+	  @Test(enabled = false)
       public void Edituser() throws InterruptedException {
       	driver.get("http://localhost:8080/CHCP/login");
   	 	driver.manage().window().maximize();
