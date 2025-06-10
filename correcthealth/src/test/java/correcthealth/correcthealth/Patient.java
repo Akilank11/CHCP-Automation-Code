@@ -17,11 +17,11 @@ public class Patient {
 	WebDriver driver = new ChromeDriver();
 	  @Test(enabled = false)
 	  public void f() throws InterruptedException {
-		  driver.get("http://localhost:8090/CHCP/login");
+		  driver.get("http://localhost:8080/CHCP/login");
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
+    	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
@@ -161,10 +161,10 @@ public class Patient {
 	  }
 	  @Test
       public void Edituser() throws InterruptedException {
-      	driver.get("http://localhost:8090/CHCP/login");
+      	driver.get("http://localhost:8080/CHCP/login");
   	 	driver.manage().window().maximize();
   	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
-  	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
+	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
   	 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
   	 	rememberme.click();
   	 	driver.findElement(By.id("btn-login")).click();

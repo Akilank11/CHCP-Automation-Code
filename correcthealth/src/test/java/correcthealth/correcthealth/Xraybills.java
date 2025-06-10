@@ -44,7 +44,7 @@ public class Xraybills {WebDriver driver = new ChromeDriver();
 	    //}
 	@Test
 	public void f() throws InterruptedException {
-		  driver.get("http://localhost:8090/CHCP/login");
+		  driver.get("http://localhost:8080/CHCP/login");
 		 	driver.manage().window().maximize();
 		 	
 		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");

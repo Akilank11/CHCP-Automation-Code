@@ -19,10 +19,10 @@ import org.testng.annotations.AfterMethod;
 public class Useraccount {
 	
 	WebDriver driver = new ChromeDriver();
-	  @Test
+	  @Test (enabled = false)
 	  public void f() throws InterruptedException {
 		
-	 	 driver.get("http://localhost:8090/CHCP/login");
+	 	 driver.get("http://localhost:8080/CHCP/login");
 	 	driver.manage().window().maximize();
 	 	
 	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
@@ -74,7 +74,7 @@ public class Useraccount {
        Select select4 = new Select(pagenavigation);
        select4.selectByVisibleText("30");
        //Edit 1st data
-       WebElement edit1stdata = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tr[@id='row_449']//td[contains(@class,'edit-control')]")));
+       WebElement edit1stdata = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//td[@class=' edit-control'])[1]")));
        edit1stdata.click();
        WebElement editname =driver.findElement(By.xpath("//input[@id='lastName']"));
        editname.clear();
@@ -106,9 +106,9 @@ public class Useraccount {
         delete.click();
 	  }
         //Create new User
-        @Test(enabled = false)
+        @Test
         public void createuser() throws InterruptedException {
-        	driver.get("http://localhost:8090/CHCP/login");
+        	driver.get("http://localhost:8080/CHCP/login");
     	 	driver.manage().window().maximize();
     	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
     	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
@@ -134,10 +134,11 @@ public class Useraccount {
         Actions act = new Actions(driver);
 
       //Double click on element
-      WebElement ele = driver.findElement(By.xpath("//select[@id='bootstrap-duallistbox-nonselected-list_facilityID']//option[@value='87'][normalize-space()='Baldwin County Jail (188)']")); 
+      WebElement ele = driver.findElement(By.xpath("//button[normalize-space()='>>']")); 
       act.doubleClick(ele).perform();
-      driver.findElement(By.id("email")).sendKeys("AkilanTest1911@gmail.com");
-      driver.findElement(By.id("mobile")).sendKeys("1234569880");
+      driver.findElement(By.id("email")).sendKeys("AkilanTest191@gmail.com");
+      Thread.sleep(1000);
+      driver.findElement(By.id("mobile")).sendKeys("8487975412");
      // WebElement phone= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[contains(@id,'phone')]")));
      // phone.sendKeys("9342893541"); 
       driver.findElement(By.xpath("//button[normalize-space()='Send Credentials Email']")).click();
@@ -160,7 +161,7 @@ public class Useraccount {
       //Edit new User
         @Test(enabled = false)
         public void Edituser() throws InterruptedException {
-        	driver.get("http://localhost:8090/CHCP/login");
+        	driver.get("http://localhost:8080/CHCP/login");
     	 	driver.manage().window().maximize();
     	 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
     	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");

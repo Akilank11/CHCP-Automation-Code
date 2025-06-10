@@ -16,24 +16,24 @@ public class GpVendors {
 	  @Test
 	  public void f() throws InterruptedException {
 		  
-		  driver.get("http://localhost:8090/CHCP/login");
+		  driver.get("http://localhost:8080/CHCP/login");
 		 	driver.manage().window().maximize();
 		 	
-		 	driver.findElement(By.id("userName")).sendKeys("akilanksa10@gmail.com");
-		 	driver.findElement(By.id("password")).sendKeys("Dev@1234");
+		 	driver.findElement(By.id("userName")).sendKeys("superadmin@gmail.com");
+    	 	driver.findElement(By.id("password")).sendKeys("Dev@7070");
 		 	WebElement rememberme =driver.findElement(By.id("rememberMe1"));
 		 	rememberme.click();
 		 	driver.findElement(By.id("btn-login")).click();
 		 	
 		 	driver.findElement(By.xpath("//a[normalize-space()='GP Vendors']")).click();
 		 	driver.findElement(By.xpath("//a[normalize-space()='GP Vendors Summary']")).click();
-		 	
+		 	Thread.sleep(5000);
 		 	//Select Vendor Name
 		 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 	WebElement vendorname = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Select Vendor Name')]")));
-		 	vendorname.click(); 
-	        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='1ST CHOICE MEDICAL & CANCER CARE']")));
-	        option.click();
+		 	//WebElement vendorname = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='select2-autoCompleterVendorName-container']")));
+		 	//vendorname.click(); 
+	        //WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='1ST CHOICE MEDICAL & CANCER CARE']")));
+	        //option.click();
 	        
 	        //select vendor id
 	        WebElement vendorid = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Select Vendor ID')]")));
